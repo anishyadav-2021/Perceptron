@@ -6,6 +6,14 @@ import joblib
 from matplotlib.colors import ListedColormap
 
 def prepare_data(df):
+  """IT is used to seperate the independent and dependent features
+
+  Args:
+      df (pd.DataFrame): Dataset    
+
+  Returns:
+      tuple: Returns the input and output data
+  """
   X=df.drop("y",axis=1)
   y=df.y
   return X, y
